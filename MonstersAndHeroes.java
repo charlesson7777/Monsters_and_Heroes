@@ -78,6 +78,7 @@ public class MonstersAndHeroes extends BoardGame {
             System.out.println("Enter name for team " + (i + 1) + ":");
             String teamName = userInput.getName();
             teamNames[i] = teamName;
+           
 
             Player[] players = new Player[numPlayersPerTeam];
 
