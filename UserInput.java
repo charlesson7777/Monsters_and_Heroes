@@ -45,25 +45,15 @@ public class UserInput {
     }
 
     public String getName() {
-        String ret;
-        while (true) {
-            System.out.print("> "); // prompt to show input is expected
-            ret = scanner.nextLine();
-            if (ret.length() > 0 && ret.length() <= 10) {
-                return ret;
-            } else {
-                System.out.println("Name must be between 1 and 10 characters.");
-            }
-        }
+        return scanner.nextLine();
     }
-    
 
     public int getTeams() throws IllegalArgumentException {
         int ret;
         while (true) {
             try {
                 System.out.println("Enter the number of teams:");
-                ret = Integer.parseInt(scanner.nextLine());
+                ret = Integer.parseInt(scanner.next());
                 if (ret == 1) {
                     return ret;
                 } else {
@@ -80,7 +70,7 @@ public class UserInput {
         while (true) {
             try {
                 System.out.println("Enter the number of players for the team:");
-                ret = Integer.parseInt(scanner.nextLine());
+                ret = Integer.parseInt(scanner.next());
                 if (ret == 1) {
                     return ret;
                 } else {
@@ -141,7 +131,7 @@ public class UserInput {
             System.out.println("Enter 1 to play Monsters and Heroes");
             System.out.println("Type quit at any time to exit");
 
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().toUpperCase();
             if (input.equalsIgnoreCase("QUIT")) {
                 System.out.println("Quit game");
                 System.exit(0);

@@ -1,7 +1,7 @@
 //This class is the inventory class for the items
 import java.util.HashMap;
 
-public class Inventory implements IInventory {
+public class Inventory implements IEntity.IInventory {
     private HashMap<String, Item> inventory;
     private int size;
     public Inventory() {
